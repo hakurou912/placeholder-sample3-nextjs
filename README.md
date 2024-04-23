@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About this
 
-## Getting Started
+独学でNext.jsを学んでいます。  
+成果物として、Parallel Routesを使って画面を作成しました。  
+異なるAPIで取得してレンダリングした要素が、並行して同時出力できることを確認できました。
 
-First, run the development server:
+使用したもの
+- [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) - a free online REST API
+- [Bootstrap@5.3.0](https://getbootstrap.jp/)  - スタイル適用
+- Next.js 14.2.2
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+理解したこと
+- Parallel Routes  
+slotsと呼ばれるフォルダ名規約（先頭にアットマーク、次にフォルダ名）が有る。  
+layout.jsでchildrenと同じようにPropsとして渡され、平行レンダリングされる。（アットマークの後のフォルダ名と完全一致させないとPropsとして渡されずレンダリングされない）
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+次回以降に学びたいこと、試したいこと
+- Parallel Routesを使う際、動的フォルダ名（@[id]など）は出来るか？  
+- モーダル追加 ← Intercepting Routesが絡む？
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+参考
+- [Parallel Routes（公式サイト）](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes)
